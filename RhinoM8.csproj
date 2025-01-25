@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	
+  <PropertyGroup>
+    <!-- Select the framework(s) you wish to target.
+        Rhino 6: net45
+        Rhino 7: net48
+        Rhino 8 Windows: net48, net7.0, net7.0-windows, net7.0-windows10.0.22000.0, etc
+        Rhino 8 Mac: net7.0, net7.0-macos, net7.0-macos12.0, etc
+    -->
+    <TargetFrameworks>net7.0-windows;net48</TargetFrameworks>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+    <TargetExt>.rhp</TargetExt>
+    <NoWarn>NU1701</NoWarn>
+    <!-- Add language version -->
+    <LangVersion>8.0</LangVersion>
+    <!-- Add these lines for Windows Forms support -->
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
+    <!-- Add this to ensure dependencies are copied -->
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+  
+  <PropertyGroup>
+    <!-- Specifies information for Assembly and Yak -->
+    <Version>0.1.0</Version>
+    <Title>RhinoM8</Title>
+    <Company>DIFFERENTIAL</Company>
+    <Description>AI-powered plugin for Rhino 8 that helps you create 3D models through natural language prompts and image uploads. It converts your text descriptions into Python scripts and 3D models.</Description>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Grasshopper" Version="8.0.23304.9001" ExcludeAssets="runtime" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+</Project>

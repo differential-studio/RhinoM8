@@ -1,0 +1,7 @@
+---
+name: RhinoM8
+version: 0.1.0
+authors:
+- Differential
+description: RhinoM8 is an AI-powered plugin that helps you create 3D models through natural language prompts and image uploads.
+url: https://github.com/differential-studio/RhinoM8
