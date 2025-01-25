@@ -81,3 +81,7 @@ _ReSharper*/
 appsettings.json
 appsettings.Development.json
 *.secret
+
+# VS Code files
+.vscode/
+*.code-workspace
