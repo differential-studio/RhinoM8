@@ -156,7 +156,7 @@ This project is open source and available under the MIT License.
 ## Contact & Support 📧
 
 Having issues or questions? Want to share your experience or collaborate? 
-Reach out to us at hello@differential.works
+Reach out to us at hello@differential.studio
 
 ---
 
